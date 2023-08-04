@@ -1,7 +1,21 @@
-<!DOCTYPE html>
-<html>
+<!-- index.html (About Me) -->
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
-</html>
+    <div class="container" id="about">
+      <h1 class="animated fadeIn">Hello, I'm Chinmay Kulkarni</h1>
+      <p class="animated fadeIn">Passionate Python Developer and a DevOps/SRE Engineer.</p>
+      <button id="animateButton">Animate</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+      document.getElementById('animateButton').addEventListener('click', () => {
+        anime({
+          targets: '.fadeIn',
+          opacity: [0, 1],
+          translateY: [20, 0],
+          duration: 1000,
+          easing: 'easeInOutQuad'
+        });
+      });
+    </script>
+  </body>
+  
